@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 	const sass = require('node-sass');
     require('load-grunt-tasks')(grunt);
     
-    const testFolder = './extends/mixins';
+    const testFolder = './extends/';
     const fs = require('fs');
     const fileBootstrap = 'extends/bootstrap.scss';
     const fileMixins = 'extends/_mixins.scss';
@@ -12,21 +12,24 @@ module.exports = function(grunt) {
 
     fs.readdir(testFolder, (err, files) => {
         files.forEach(file => {
-            console.log('./extends/mixins/' + file);
+            if (file.match("_") && file != "_mixins.scss"){
+                console.log('./extends/' + file);
+
+                var nameFile = file.replace('_', '');
+                nameFile = nameFile.replace('.scss', '');
+    
+                if (textMixins.match('../bootstrap/mixins/' + nameFile)){
+                    textMixins = textMixins.replace('../bootstrap/mixins/' + nameFile, 'mixins/' + nameFile)
+                    grunt.file.write(fileMixins, textMixins);
+                    //console.log(textMixins);
+                }
+    
+                if (textBootstrap.match('../bootstrap/' + nameFile)){
+                    textBootstrap = textBootstrap.replace('../bootstrap/' + nameFile, nameFile);
+                    grunt.file.write(fileBootstrap, textBootstrap);
+                }
+            }
             
-            var nameFile = file.replace('_', '');
-            nameFile = nameFile.replace('.scss', '');
-
-            if (textMixins.match('../bootstrap/mixins/' + nameFile)){
-                textMixins = textMixins.replace('../bootstrap/mixins/' + nameFile, 'mixins/' + nameFile)
-                grunt.file.write(fileMixins, textMixins);
-                //console.log(textMixins);
-            }
-
-            if (textBootstrap.match('../bootstrap/' + nameFile)){
-                textBootstrap = textBootstrap.replace('../bootstrap/' + nameFile, nameFile);
-                grunt.file.write(fileBootstrap, textBootstrap);
-            }
         });
     })
 

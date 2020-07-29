@@ -4,13 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/main.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <title>FS testing</title>
 </head>
-<body>
-    <h1>hello!</h1>
-    <div class="btn btn-group">
-        <button type="button" class="btn btn-danger">Danger</button>
+<body onresize="resize()" onload="resize()">
+  
+    <header>    
+        <script>
+            function resize() {
+                if(window.outerWidth <= 992){
+                    document.getElementById("top").style.display = "none";
+                    document.getElementById("fserch").style.display = "block";
+                }else{
+                    document.getElementById("top").removeAttribute("style");
+                    document.getElementById("fserch").style.display = "none";
+                }
+                if(window.outerWidth >= 992) {
+                    document.getElementById("fserch").style.display = "none";
+                }
+            }
+        </script>
+        <div class="container-fluid" id="top">
+            <div class="col-md-8">
+                <a href="#"><img src="image/Vector Smart Object.png" alt="logo" class="logo"></a>
+            </div>      
+            <div class="col-md-4">                         
+                <div class="input-group" style="margin-top: 35px">                         
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" style="width:70px;"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>  
+        </div>
 
-    </div>
+        <nav class="navbar navbar-default justify-content-center" role="navigation">
+            <div class="row">
+                <div class="col-sm-12 col-md-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button style="margin-top: 10px;" type="button" class="navbar-toggle pull-right btn btn-default" data-toggle="collapse" data-target="#search">
+                            <!-- <i class="glyphicon glyphicon-search"></i> -->
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav justify-content-center">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Help & FAQ</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse" id="search">
+                        <ul class="nav navbar-nav">
+                            <li><form class="navbar-form" role="search" id="fserch">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" name="q">
+                                    <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form></li>                            
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </nav>
+                   
+       
+            <!-- <nav class="navbar navbar-default sticky-top navbar-expand-md">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Help & FAQ</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>         -->
+    </header>    
+
+    <main>
+        <div class="container">
+            <h1>Buttons</h1>
+        <!-- <div class="container"> -->
+                <button id="buttons" class="btn btn-primary" type="button">Primary</button>
+                <button id="buttons" class="btn btn-default" type="button">Default</button>
+                <button id="buttons" class="btn btn-success" type="button">Success</button>
+                <button id="buttons" class="btn btn-info" type="button">Info</button>
+                <button id="buttons" class="btn btn-warning" type="button">warning</button>
+                <button id="buttons" class="btn btn-danger" type="button">Danger</button>
+        </div>
+        
+        <!-- </div> -->
+    </main>
 </body>
 </html>
