@@ -283,6 +283,14 @@ $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
 
+$custom-control-indicator-size:         5px !default;
+$custom-control-gutter:                 .5px !default;
+$custom-control-indicator-size:         5px !default;
+$custom-control-spacer-x:               5px !default;
+
+$custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2 !default;
+$custom-switch-width:                           $custom-control-indicator-size * 1.75 !default;
+
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.

@@ -8,12 +8,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap_s.js"></script>
     <title>FS testing</title>
 </head>
 <body onresize="resize()" onload="resize()">
   
     <header>    
         <script>
+            $(document).ready(function() {
+                var $navbar = $("#mNavbar");               
+                
+                AdjustHeader(); // Incase the user loads the page from halfway down (or something);
+                $(window).scroll(function() {
+                    AdjustHeader();
+            });
+            
+            function AdjustHeader(){
+              if ($(window).scrollTop() > 70) {
+                if (!$navbar.hasClass("navbar-fixed-top")) {
+                  $navbar.addClass("navbar-fixed-top");
+                }
+              } else {
+                $navbar.removeClass("navbar-fixed-top");
+              }
+            }
+          });
             function resize() {
                 if(window.outerWidth <= 992){
                     document.getElementById("top").style.display = "none";
@@ -26,6 +45,8 @@
                     document.getElementById("fserch").style.display = "none";
                 }
             }
+
+            
         </script>
         <div class="container-fluid" id="top">
             <div class="col-md-8">
@@ -41,7 +62,7 @@
             </div>  
         </div>
 
-        <nav class="navbar navbar-default justify-content-center" role="navigation">
+        <nav class="navbar navbar-default justify-content-center" role="navigation" id="mNavbar">
             <div class="row">
                 <div class="col-sm-12 col-md-9">
                     <div class="navbar-header">
@@ -104,15 +125,108 @@
 
     <main>
         <div class="container">
-            <h1>Buttons</h1>
+            <h2>Buttons</h1>
         <!-- <div class="container"> -->
-                <button id="buttons" class="btn btn-primary" type="button">Primary</button>
-                <button id="buttons" class="btn btn-default" type="button">Default</button>
-                <button id="buttons" class="btn btn-success" type="button">Success</button>
-                <button id="buttons" class="btn btn-info" type="button">Info</button>
-                <button id="buttons" class="btn btn-warning" type="button">warning</button>
-                <button id="buttons" class="btn btn-danger" type="button">Danger</button>
+            <button id="buttons" class="btn btn-primary" type="button">Primary</button>
+            <button id="buttons" class="btn btn-default" type="button">Default</button>
+            <button id="buttons" class="btn btn-success" type="button">Success</button>
+            <button id="buttons" class="btn btn-info" type="button">Info</button>
+            <button id="buttons" class="btn btn-warning" type="button">warning</button>
+            <button id="buttons" class="btn btn-danger" type="button">Danger</button>
+
+            <h2>Inputs</h2>
+
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                <label class="form-check-label" for="defaultCheck1">Checkbox Active</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">Radio Active</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">                                
+                                <label class="switch">
+                                <input type="checkbox" class="success">
+                                <span class="slider round"></span>
+                            </div>
+                        </td>
+                        <td><label class="form-check-label" for="defaultCheck2">switch active</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">Checkbox</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">Radio</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">                                
+                                <label class="switch">
+                                <input type="checkbox" class="success">
+                                <span class="slider round"></span>
+                            </div>
+                        </td>
+                        <td><label class="form-check-label" for="defaultCheck2">switch</label></td>
+                    </tr>
+                </table>
+
+                  
+            </form>
+            
+            <h2>Star rating</h2>
+
+            <div class="rating" >
+                <input type="radio" name="rating" id="r1">
+                <label for="r1"></label>
+                <input type="radio" name="rating" id="r2">
+                <label for="r2"></label>
+
+                <input type="radio" name="rating" id="r3">
+                <label for="r3"></label>
+
+                <input type="radio" name="rating" id="r4">
+                <label for="r4"></label>
+
+                <input type="radio" name="rating" id="r5">
+                <label for="r5"></label>
+            </div>
+
+            <div class="rating" >
+                <input type="radio" name="ratings" id="r6">
+                <label for="r6"></label>
+                <input type="radio" name="ratings" id="r7">
+                <label for="r7"></label>
+
+                <input type="radio" name="ratings" id="r8">
+                <label for="r8"></label>
+
+                <input type="radio" name="ratings" id="r9">
+                <label for="r9"></label>
+
+                <input type="radio" name="ratings" id="r10">
+                <label for="r10"></label>
+            </div>
+<br>
+<br>
+            <h2>Carousel</h2>
+
         </div>
+
+        
         
         <!-- </div> -->
     </main>
