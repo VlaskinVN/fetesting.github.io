@@ -8,20 +8,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/bootstrap_s.js"></script>
+    <script src="js/script.js"></script>
     <title>FS testing</title>
 </head>
 <body onresize="resize()" onload="resize()">
   
     <header>    
-        <script>
+        <!-- <script>
+            $(function() {
+            // Owl Carousel
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                items: 1,
+                margin: 10,
+                loop: true,
+                nav: true
+            });
+            });
             $(document).ready(function() {
-                var $navbar = $("#mNavbar");               
+                var $navbar = $("#mNavbar");  
+             
                 
                 AdjustHeader(); // Incase the user loads the page from halfway down (or something);
                 $(window).scroll(function() {
                     AdjustHeader();
-            });
+                });
             
             function AdjustHeader(){
               if ($(window).scrollTop() > 70) {
@@ -46,8 +62,8 @@
                 }
             }
 
-            
-        </script>
+
+        </script> -->
         <div class="container-fluid" id="top">
             <div class="col-md-8">
                 <a href="#"><img src="image/Vector Smart Object.png" alt="logo" class="logo"></a>
@@ -137,7 +153,7 @@
             <h2>Inputs</h2>
 
             <form>
-                <table>
+                <table class="input-table">
                     <tr>
                         <td>
                             <div class="form-check">
@@ -223,12 +239,80 @@
 <br>
 <br>
             <h2>Carousel</h2>
+            <!-- <img class='imgbut' src='https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg' alt='' -->
 
+            <div id="sync1" class="owl-carousel owl-theme">
+                <div class="item" data-dot="<button class=&quot;imgbut&quot; style=&quot;background: url('https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg') center no-repeat;background-size: 60px; &quot;></button>">
+                  <table>
+                      <tr class="tdcar">
+                          <td><img src="https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg" alt="" class="imgcarousel"></td>
+                          <td class="tdcar">
+                              <label class="lablecar">when I started, i weighed over 425 pounds. what matters is that you take the steps and focus on making one good choice at a time</label>
+                              <h3>chewbacca</h3>
+                              <h5>July 2017</h5>
+                          </td>
+                      </tr>
+                  </table>                
+                </div>                
+                <div class="item" data-dot="<button>02</button>">
+                  <h1>2</h1>                  
+                </div>
+                <div class="item" data-dot="<button>03</button>">
+                  <h1>3</h1>                  
+                </div>
+                <div class="item" data-dot="<button>04</button>">
+                  <h1>4</h1>                  
+                </div>
+              </div>
+              
         </div>
 
         
         
         <!-- </div> -->
     </main>
+
+    <footer>
+        <div class="conteiner">
+            <table class="table-footer">
+                <tr class="tr-head">
+                    <td>Shop</td>
+                    <td>About</td>
+                    <td>More</td>
+                    <td>Folow us</td>
+                </tr>
+                <tr class="tr-content">
+                    <td><a href="" class="footer-href">Browse By Holiday</a></td>
+                    <td><a href="" class="footer-href">About Spirited GIfts</a></td>
+                    <td><a href="" class="footer-href">Gift of the Month Clubs</a></td>
+                    <td><a href="" class="footer-href"></a></td>
+                </tr>
+                <tr class="tr-content">
+                    <td><a href="" class="footer-href">Browse By Brand</a></td>
+                    <td><a href="" class="footer-href">Read our Blog</a></td>
+                    <td><a href="" class="footer-href">About our Selection</a></td>
+                    <td><a href="" class="footer-href"></a></td>
+                </tr>
+                <tr class="tr-content">
+                    <td><a href="" class="footer-href">Gift of te Month Clubs</a></td>
+                    <td><a href="" class="footer-href">Reteiler Network</a></td>
+                    <td><a href="" class="footer-href">Help  and FAQs</a></td>
+                    <td><a href="" class="footer-href"></a></td>
+                </tr>
+                <tr class="tr-content">
+                    <td><a href="" class="footer-href">Customized Bottles</a></td>
+                    <td><a href="" class="footer-href">Read our Reviews</a></td>
+                    <td><a href="" class="footer-href">Scholarship</a></td>
+                    <td><a href="" class="footer-href"></a></td>
+                </tr>
+                <tr class="tr-content">
+                    <td><a href="" class="footer-href">Corporate Gifts</a></td>
+                    <td><a href="" class="footer-href">Shipping & Returns</a></td>
+                    <td><a href="" class="footer-href">Contact Us</a></td>
+                    <td><a href="" class="footer-href"></a></td>
+                </tr>
+            </table>            
+        </div>
+    </footer>
 </body>
 </html>

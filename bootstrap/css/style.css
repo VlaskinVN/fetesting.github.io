@@ -21,17 +21,18 @@ h2{
     margin-bottom: 40px;
 }
 
-table{
+.input-table{
     text-align: left;
     padding: 1em;
     margin: 0 auto;
     text-align: center;
+    width: 90%;
 }
 
-tr{
+.input-table > tr{
     padding: 1em;
 }
-td{
+.input-table > td{
     padding: 1em;
 }
 
@@ -110,3 +111,136 @@ td{
   color: #f9bf3b;
   text-shadow: 0 0 20px #f9bf3b;
 }
+
+footer{
+    background-color: rgba(236, 236, 236, 0.5);
+}
+
+.table-footer{
+    text-align: left;
+    padding: 1em;
+    margin: 0 auto;
+    width: 70%;    
+    
+}
+
+.tr-head{
+    color: blue;
+    margin: 0 1em;
+}
+
+.tr-content{
+    font-size: 10px;
+    
+}
+
+td{
+    padding: 1em;
+}
+
+.footer-href{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#sync1{
+    width: 70%;  
+    margin: 0 auto;
+}
+#sync1 .item {
+    background: #ffffff;
+    padding: 80px 0px;
+    margin: 5px;
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid;
+    border-color: rgba(211, 211, 211, 0.466);
+  }
+  #sync2 .item {
+    background: #C9C9C9;
+    padding: 10px 0px;
+    margin: 5px;
+    color: #FFF;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+  }
+  #sync2 .item h1 {
+    font-size: 18px;
+  }
+  #sync2 .current .item {
+    background: #0c83e7;
+  }
+
+  .owl-theme .owl-nav [class*='owl-'] {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: #D6D6D6;
+  }
+  #sync1.owl-theme {
+    position: relative;
+  }
+  #sync1.owl-theme .owl-next,
+  #sync1.owl-theme .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  #sync1.owl-theme .owl-prev {
+    left: -50px;
+  }
+  #sync1.owl-theme .owl-next {
+    right: -50px;
+  }
+ 
+  .buttonround{
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+  }
+  .imgbut{
+    background-repeat: no-repeat;
+    background-position: 5px left;
+    transition: all .2s;
+    border-radius: 50%;
+    border-style: none;
+    width: 60px;
+    height: 60px;
+    background: url('https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg') center no-repeat;
+    background-size: 60px;
+  }
+
+  .imgcarousel{
+    border-radius: 50%;
+  }
+
+  .tdcar{
+      text-align: left;
+  }
+
+  .lablecar{
+      color: darkgrey;
+      font-weight: normal;
+  }
+
+  h3{
+      text-transform: uppercase;
+      font-weight: bold;
+  }
