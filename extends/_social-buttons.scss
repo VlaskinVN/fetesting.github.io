@@ -1,0 +1,19 @@
+.btn-social {
+  background: #000000;  
+  border-radius: 0;
+  color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+  margin: 10px;
+}
+.btn-social:link,
+.btn-social:visited {
+  color: #fff;
+}
+.btn-social:active,
+.btn-social:hover {
+  background: #0049b0;
+  border-color: #0049b0;
+  color: #fff;
+}
