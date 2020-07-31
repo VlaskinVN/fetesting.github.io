@@ -161,12 +161,13 @@ a:hover{
 }
 #sync1 .item {
     background: #ffffff;
-    padding: 80px 0px;
+    /* padding: 80px 0px; */
     margin: 5px;
     border-radius: 3px;
     text-align: center;
     border: 1px solid;
     border-color: rgba(211, 211, 211, 0.466);
+    height: 300px;
   }
   #sync2 .item {
     background: #C9C9C9;
@@ -229,10 +230,18 @@ a:hover{
 
   .imgcarousel{
     border-radius: 50%;
+    height: 250px;
+    width: 250px;
   }
 
   .tdcar{
       text-align: left;
+      height: 90%;
+      width: 60%;
+  }
+  .car{
+    height: 90%;
+    width: 250px;
   }
 
   .lablecar{
@@ -244,3 +253,35 @@ a:hover{
       text-transform: uppercase;
       font-weight: bold;
   }
+
+.owl-item img {
+    display: block;
+    width: 250px;
+}
+
+@media (max-width: 768px){
+  .table-desc{
+    display: none;
+  }
+
+  .table-mob{
+    display: inline;
+  }
+
+  .imgcarousel{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  #sync1 .item{
+    height: auto;
+  }
+
+  .tdcar{
+    text-align: left;    
+  }
+
+
+}
