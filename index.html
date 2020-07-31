@@ -11,10 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
     <script src="js/bootstrap_s.js"></script>
     <script src="js/script.js"></script>
-    <title>FS testing</title>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 25.787375, lng: -80.2320014};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 15, center: uluru});
+        }
+            </script>
+    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPEezvg0hHyVupAaOQa9WzkQNEr58dPbY&callback=initMap"
+    type="text/javascript"></script>
+    <title>FE testing</title>
+    
 </head>
 <body onresize="resize()" onload="resize()">
   
@@ -254,19 +267,49 @@
                       </tr>
                   </table>                
                 </div>                
-                <div class="item" data-dot="<button>02</button>">
-                  <h1>2</h1>                  
-                </div>
-                <div class="item" data-dot="<button>03</button>">
-                  <h1>3</h1>                  
-                </div>
-                <div class="item" data-dot="<button>04</button>">
-                  <h1>4</h1>                  
-                </div>
+                <div class="item" data-dot="<button class=&quot;imgbut&quot; style=&quot;background: url('https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg') center no-repeat;background-size: 60px; &quot;></button>">
+                    <table>
+                        <tr class="tdcar">
+                            <td><img src="https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg" alt="" class="imgcarousel"></td>
+                            <td class="tdcar">
+                                <label class="lablecar">when I started, i weighed over 425 pounds. what matters is that you take the steps and focus on making one good choice at a time</label>
+                                <h3>chewbacca</h3>
+                                <h5>July 2017</h5>
+                            </td>
+                        </tr>
+                    </table>                
+                  </div>        
+                  <div class="item" data-dot="<button class=&quot;imgbut&quot; style=&quot;background: url('https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg') center no-repeat;background-size: 60px; &quot;></button>">
+                    <table>
+                        <tr class="tdcar">
+                            <td><img src="https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg" alt="" class="imgcarousel"></td>
+                            <td class="tdcar">
+                                <label class="lablecar">when I started, i weighed over 425 pounds. what matters is that you take the steps and focus on making one good choice at a time</label>
+                                <h3>chewbacca</h3>
+                                <h5>July 2017</h5>
+                            </td>
+                        </tr>
+                    </table>                
+                  </div>        
+                  <div class="item" data-dot="<button class=&quot;imgbut&quot; style=&quot;background: url('https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg') center no-repeat;background-size: 60px; &quot;></button>">
+                    <table>
+                        <tr class="tdcar">
+                            <td><img src="https://images-na.ssl-images-amazon.com/images/I/91YjCsvsT7L._AC_UX425_.jpg" alt="" class="imgcarousel"></td>
+                            <td class="tdcar">
+                                <label class="lablecar">when I started, i weighed over 425 pounds. what matters is that you take the steps and focus on making one good choice at a time</label>
+                                <h3>chewbacca</h3>
+                                <h5>July 2017</h5>
+                            </td>
+                        </tr>
+                    </table>                
+                  </div>        
               </div>
+
+              
               
         </div>
 
+        <div id="map" style="width: 100%; height: 400px; margin-top: 30px;"></div>
         
         
         <!-- </div> -->

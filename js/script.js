@@ -11,7 +11,7 @@ $(function() {
         });
         
     });
-    $(document).ready(function() {
+    $(document).ready(function() {        
         var $navbar = $("#mNavbar");  
      
         
