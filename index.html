@@ -21,10 +21,93 @@
           var uluru = {lat: 25.787375, lng: -80.2320014};
           // The map, centered at Uluru
           var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 15, center: uluru});
+              document.getElementById('map'), {
+                  zoom: 15, 
+                  center: uluru,
+                  styles: [
+            {elementType: 'geometry', stylers: [{color: '#e6edf7'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#292d32'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#292d32'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#292d32'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#292d32'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#e6edf7'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#292d32'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#0049b0'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#0049b0'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#0049b0'}]
+            }
+          ]});
+
         }
             </script>
-    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPEezvg0hHyVupAaOQa9WzkQNEr58dPbY&callback=initMap"
+    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJgjvpkUF_MPgdmDNVZqCn9znSlRsVSiA&callback=initMap"
     type="text/javascript"></script>
     <title>FE testing</title>
     
