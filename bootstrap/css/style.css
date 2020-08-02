@@ -143,13 +143,30 @@ td{
     color: black;
 }
 
-a:active{
+.footer-slider{
+  text-decoration: none;
+    color: black;
+}
+
+.footer-slider:active{
+  text-decoration: none;
+    color: rgb(73, 66, 172);
+    font-weight: bold;
+}
+
+.footer-slider:hover{
+  text-decoration: none;
+    color: rgb(73, 66, 172);
+    font-weight: bold;
+}
+
+.footer-href:active{
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-a:hover{
+.footer-href:hover{
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -259,7 +276,43 @@ a:hover{
     width: 250px;
 }
 
-@media (max-width: 768px){
+.footer-lapton{
+  display: none;
+  background-color: rgba(236, 236, 236, 0.5);
+}
+
+.footer-mobile{
+  text-align: center;
+  display: none;
+  background-color: rgba(236, 236, 236, 0.5);
+}
+
+@media (max-width: 767.98px){  
+  #top{
+    display: none;
+  }
+  #fserch{
+    display: inline;
+  }
+  #map{
+    display: none;
+  }
+  #map{
+    display: none;
+  }
+
+  .footer-standart{
+    display: none;
+  }
+  .footer-lapton{
+    display: none;
+    background-color: rgba(236, 236, 236, 0.5);
+  }
+
+  .footer-mobile{
+    display: inline;
+    background-color: rgba(236, 236, 236, 0.5);
+  }
   .table-desc{
     display: none;
   }
@@ -282,6 +335,75 @@ a:hover{
   .tdcar{
     text-align: left;    
   }
+}
 
 
+
+.tr-head-mobile{
+  text-align: center;
+  color: blue;
+    /* margin: 0 1em; */
+}
+
+.tr-content-mobile{
+  text-align: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  #top{
+    display: none;
+  }
+  #fserch{
+    display: inline;
+  }
+  #map{
+    display: none;
+  }
+
+  .footer-standart{
+    display: none;
+    background-color: rgba(236, 236, 236, 0.5);
+  }
+
+  .footer-lapton{
+    display: inline;
+    background-color: rgba(236, 236, 236, 0.5);
+  }
+}
+
+
+.block__item{
+  margin-bottom: 20px;
+}
+
+.block__title{
+  position: relative;
+  padding: 0px 0px 0px 30px;
+  cursor: pointer;
+}
+
+.block__title:before,
+.block__title:after{
+  content: '';
+  width: 10px;
+  height: 1px;
+  color: #000000;
+  position: absolute;
+  top:8px;
+}
+
+.block__title:before{
+  transform: rotate(40deg);
+  left:0px;  
+}
+
+.block__title:after{
+  transform: rotate(-40deg);
+  left:8px;  
+}
+
+.block__text{
+  /* display: none; */
+  padding-top: 10px;
 }

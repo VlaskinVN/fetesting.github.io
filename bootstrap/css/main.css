@@ -2846,7 +2846,6 @@ input:checked + .slider:before {
   border-radius: 50%; }
 
 .btn {
-  display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
   text-align: center;
@@ -3155,7 +3154,9 @@ input[type="button"].btn-block {
   border-width: 1px;
   border-style: solid;
   border-color: #000000;
-  margin: 10px; }
+  margin: 10px;
+  width: 9%;
+  height: 9%; }
 
 .btn-social:link,
 .btn-social:visited {
